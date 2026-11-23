@@ -1,0 +1,102 @@
+
+body{
+    background-image: url(/public/imgs/bg3.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+#cenario{
+    background-image: url(/public/imgs/cenario.gif);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 1080px;
+    height: 720px;
+    border-bottom: 5px solid rgb(37, 131, 42);
+    border: 20px solid #6d4b0d;
+    margin:auto;
+    overflow: hidden;
+    position:relative;
+}
+#boneco{
+    
+    width: 180px;
+    height: 180px;
+    object-fit: contain;
+    position:absolute;
+    bottom: -35px;
+    left: -15px;
+
+}
+
+#boneco img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  image-rendering: pixelated;
+}
+
+#obstaculo{
+    
+    width: 120px;
+    height: 120px;
+    position: absolute;
+    bottom: -15px;
+    border-radius: 50%;
+    filter: blur(1.5px);
+    animation: mover 2s infinite linear;
+}
+
+#obstaculo img {
+  width: 100%;
+  height: 100%;
+  bottom: -10px;
+  object-fit: contain;
+  image-rendering: pixelated;
+}
+
+#recompensa{
+    
+    width: 95px;
+    height: 95px;
+    position: absolute;
+    bottom: -15px;
+    border-radius: 50%;
+    filter: blur(1px);
+
+}
+
+#recompensa img {
+  width: 100%;
+  height: 100%;
+  bottom: -10px;
+  object-fit: contain;
+  image-rendering: pixelated;
+}
+
+@keyframes mover {
+    0%{
+        left: 1080px;
+    }
+    100%{
+        left: -30px;
+    }
+}
+
+@keyframes pular{
+    0%{
+        bottom: 30px;
+    }
+    50%{
+        bottom:150px;
+    }
+    100%{
+        bottom:30px;
+    }
+}
+
+.pulando{
+    animation: pular 0.8s ;
+}
